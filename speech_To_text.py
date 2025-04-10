@@ -10,7 +10,10 @@ import speech_recognition as sr
 import os
 
 app = FastAPI()
-
+@app.get("/")
+def read_root():
+    return {"message": "Hello, Render!"}
+    
 @app.post("/speech-to-text/")
 async def speech_to_text(audio_file: UploadFile = File(...)):
     recognizer = sr.Recognizer()
