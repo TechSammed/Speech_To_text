@@ -3,3 +3,4 @@ uvicorn
 scikit-learn
 numpy
 pandas
+SpeechRecognition==3.10.0
